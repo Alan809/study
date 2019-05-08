@@ -1,6 +1,6 @@
 # 虚拟DOM、diff算法
 
-<img src="https://img-blog.csdn.net/20180717182348969" />
+<img src="../../.vuepress/public/domDiff/1.jpg" />
 
 ## **React中的虚拟DOM是什么？**
 　   虽然React中的虚拟DOM很好用，但是这是一个无心插柳的结果。 　　
@@ -20,7 +20,7 @@
 
 　　比如，我们在一个空白网页的body中添加一个div元素，如下所示：
 
-![Alt text](https://images2017.cnblogs.com/blog/1044137/201708/1044137-20170801225429255-521935350.png)
+![Alt text](../../.vuepress/public/domDiff/2.png)
 
 这个元素会挂载默认的styles、得到这个元素的computed属性、注册相应的Event Listener、DOM Breakpoints以及大量的properties，这些属性、方法的注册肯定是需要h耗费大量时间的。
 
@@ -121,7 +121,7 @@
     }
     console.log(str);
 
-![Alt text](https://images2017.cnblogs.com/blog/1044137/201708/1044137-20170830091841171-1021895840.png)
+![Alt text](../../.vuepress/public/domDiff/3.png)
 
 可以看到，这些属性还是非常惊人的，包括样式的修饰特性、一般的特性、方法等等，如果我们打印出其长度，可以得到惊人的227个。
 
@@ -306,13 +306,14 @@ element.js
 
 上面的这段代码，就可以渲染出下面的结果了：
 
-![Alt text](https://images2017.cnblogs.com/blog/1044137/201708/1044137-20170830101420718-2040904880.png)
+![Alt text](../../.vuepress/public/domDiff/4.png)
 
 **`2、比较两颗虚拟DOM树的差异`**
 
 　　**比较两颗DOM数的差异是Virtual DOM算法中最为核心的部分，这也就是所谓的Virtual DOM的diff算法。 两个树的完全的diff算法是一个时间复杂度为 O(n3) 的问题。 但是在前端中，你会很少跨层地移动DOM元素，所以真实的DOM算法会对同一个层级的元素进行对比。** 
 
-![Alt text](https://images2017.cnblogs.com/blog/1044137/201708/1044137-20170830101733202-1167202046.png)
+![Alt text](../../.vuepress/public/domDiff/5.png)
+
 
 上图中，div只会和同一层级的div对比，第二层级的只会和第二层级对比。 这样算法复杂度就可以达到O(n)。
 
@@ -322,7 +323,7 @@ element.js
 
 　　 在实际的代码中，会对新旧两棵树进行一个深度优先的遍历，这样每一个节点就会有一个唯一的标记：
 
-![Alt text](https://images2017.cnblogs.com/blog/1044137/201708/1044137-20170830102245702-1187605690.png)
+![Alt text](../../.vuepress/public/domDiff/6.png)
 
 上面的这个遍历过程就是深度优先，即深度完全完成之后，再转移位置。 在深度优先遍历的时候，每遍历到一个节点就把该节点和新的树进行对比，如果有差异的话就记录到一个对象里面。
 
