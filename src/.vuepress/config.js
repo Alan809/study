@@ -8,7 +8,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: '前端知识点总结',
-      description: '把努力变成一种习惯，而不是一时热血。'
+      description: '任何不能够给你快乐的编程都是耍流氓'
     }
   },
   head: [
@@ -25,7 +25,7 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'Alan809/study',
+    repo: 'jasonandjay/study',
 
     docsDir: 'src',
     editLinks: true,
@@ -33,7 +33,7 @@ module.exports = {
     locales: {
       '/': {
         label: '简体中文',
-        repo: 'Alan809/study',
+        repo: 'jasonandjay/study',
       
         selectText: '选择语言',
         editLinkText: '帮助我们改进内容',
@@ -59,6 +59,7 @@ module.exports = {
               { text: '前后端交互', link: '/zh/standard/Cooperation.md'},
               { text: '移动端兼容问题', link: '/zh/standard/Compatibility.md'},
               { text: '项目优化', link: '/zh/standard/Improve.md'},
+              { text: '浏览器缓存', link: '/zh/standard/Cache.md'},
               { text: '单页面应用', link: '/zh/standard/Spa.md'}
             ],
           },
@@ -77,6 +78,7 @@ module.exports = {
               { text: 'Vue', link: '/zh/vue/' },
               { text: 'React', link: '/zh/react/'},
               { text: '小程序', link: '/zh/miniapp/' },
+              { text: 'Webpack', link: '/zh/webpack/'},
               { text: '悦读管理后台', link: '/zh/interface/Yuedu.md'},
               { text: 'BlackMarket', link: '/zh/interface/BlackMarket.md'},
               { text: 'TouTiao', link: '/zh/interface/TouTiao.md'}
@@ -105,7 +107,7 @@ module.exports = {
             '', 'Es6', 'Es6方法扩展', 'Webpack', 'Babel', 'Promise', 'Vue 各种方法之间的区别', 'Vue组件', 'Vue路由', 'Vue动画', 'vue钩子函数', 'vuex'
           ]}],
           '/zh/react/': [{title: 'React知识点', children: [
-            '', 'JSX', 'MVVM', 'Props', 'React生命周期', 'React组件', 'React路由', 'redux', 'redux中间件', '组件通信', '高阶组件', '虚拟DOM、diff算法'
+            '', 'JSX', 'MVVM', 'Props', 'React生命周期', 'React组件', 'React路由', 'redux', 'redux中间件', '组件通信', '高阶组件'
           ]}],
           '/zh/miniapp/': [{title: '小程序知识点', children: [
             '', 'WXS', 'wepy组件通信', '小程序事件', '小程序路由', '小程序组件', '小程序组件化'
